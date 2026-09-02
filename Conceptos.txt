@@ -1,0 +1,8 @@
+# Database
+
+Las FILAS se llaman RESGISTROS
+Las COLUMNAS se llaman CAMPOS´
+
+El simbolo  " * "  nos sirve para seleccionar todas las columnas de una tabla
+
+La palabra " DISTINCT " para no repetir datos en la consulta y solo recibir los unicos
