@@ -1,8 +1,33 @@
-# Database
+-- Notacion --
 
 Las FILAS se llaman RESGISTROS
-Las COLUMNAS se llaman CAMPOS´
+Las COLUMNAS se llaman CAMPOS
+
+
+-- Crear Tablas --
+
+CREATE TABLE ___(
+
+);
+
+TEXT --> STRING
+INTEGER --> ENTEROS
+REAL --> DECIMALES
+
+" NO NULL "  significa que los datos pueden repetirse
+
+" PRIMARY KEY "  significa que el dato es unico (No se puede repetir)
+
+
+
+-- Consultas--
 
 El simbolo  " * "  nos sirve para seleccionar todas las columnas de una tabla
 
 La palabra " DISTINCT " para no repetir datos en la consulta y solo recibir los unicos
+
+Para Condiciones se utiliza " WHERE " (WHERE coin = 'AGK') o (WHERE amount <= 20)
+
+" AND " Nos ayuda para añadir mas condiciones a nuestra consulta
+
+Eliminar tablas " DROP TABLE "    (DROP TABLE sales;)

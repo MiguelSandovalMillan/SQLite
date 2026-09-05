@@ -27,7 +27,10 @@ INSERT INTO workers (first_name, last_name, age, exp_years, gender) VALUES
 ('Qaostu', 'Malop', 25, 4, 'Female');
 
 
--- Consultas
-SELECT * FROM users
+                -- CONSULTAS --
 
-SELECT * FROM workers
+-- SELECT * FROM users  (SELECIONA TODA LA TABLA DE USUARIOS)
+
+-- SELECT DISTINCT coin FROM sales  (SELECCIONA TODAS LAS MONEDAS DISTINTAS DE LA TABLA DE VENTAS)
+
+-- DROP TABLE sales; (ELIMINA LA TABLA DE VENTAS)
