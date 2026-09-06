@@ -43,6 +43,22 @@ INSERT INTO people (name, age, status) VALUES
 SELECT * FROM people
 WHERE age >= 20 AND age <= 28;
 
-
 SELECT * FROM people
 WHERE age >= 17 AND age <= 25 AND status = "employed"
+
+
+
+SELECT * FROM people
+WHERE age >= 17 AND age <= 25 OR status = "employed"
+
+SELECT * FROM people
+WHERE age < 19 OR age > 31 or status = "employed"
+
+
+SELECT * FROM people
+WHERE NOT age < 19 
+WHERE age >= 19         --(ES LO MISMO QUE LA LINEA ANTERIOR)--
+
+SELECT * FROM people
+WHERE NOT age > 31
+WHERE age <= 31         --(ES LO MISMO QUE LA LINEA ANTERIOR)--

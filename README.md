@@ -1,2 +1,0 @@
-# SQLite
-Trabajos usando SQLite

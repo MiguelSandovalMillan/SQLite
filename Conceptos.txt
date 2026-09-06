@@ -28,6 +28,10 @@ La palabra " DISTINCT " para no repetir datos en la consulta y solo recibir los 
 
 Para Condiciones se utiliza " WHERE " (WHERE coin = 'AGK') o (WHERE amount <= 20)
 
-" AND " Nos ayuda para añadir mas condiciones a nuestra consulta
+" AND " Nos ayuda para añadir mas condiciones a nuestra consulta (se tienen que cumplir todas las condiciones)
+
+" OR " Nos ayuda para añadir mas condiciones a nuestra consulta (se tiene que cumplir al menos una de las condiciones)
+
+" NOT " Nos ayuda para negar una condicion (WHERE NOT coin = 'AGK')
 
 Eliminar tablas " DROP TABLE "    (DROP TABLE sales;)
