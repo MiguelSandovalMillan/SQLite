@@ -62,3 +62,14 @@ WHERE age >= 19         --(ES LO MISMO QUE LA LINEA ANTERIOR)--
 SELECT * FROM people
 WHERE NOT age > 31
 WHERE age <= 31         --(ES LO MISMO QUE LA LINEA ANTERIOR)--
+
+
+
+-- La primera consulta devuelve todas las personas menores de 30 años (cualquier género) 
+-- además de todas las mujeres mayores de 20.
+WHERE age < 30 OR gender = 'female' AND age > 20 
+
+WHERE age < 30 OR (gender = 'female' AND age > 20)        --igual--
+
+-- La segunda consulta devuelve únicamente a people mayores de 20 que tienen menos de 30 años o son female.
+WHERE (age < 30 OR gender = 'female') AND age > 20

@@ -1,0 +1,43 @@
+-- Notacion --
+
+Las FILAS se llaman RESGISTROS
+Las COLUMNAS se llaman CAMPOS
+
+
+
+-- Crear Tablas --
+
+CREATE TABLE ___(
+
+);
+
+TEXT --> STRING
+INTEGER --> ENTEROS
+REAL --> DECIMALES
+
+
+" NO NULL "  significa que los datos pueden repetirse
+
+" PRIMARY KEY "  significa que el dato es unico (No se puede repetir)
+
+-- CONDICIONES --
+
+" WHERE " se utiliza para Condiciones  (WHERE coin = 'AGK') o (WHERE amount <= 20)
+
+" AND " Nos ayuda para añadir mas condiciones a nuestra consulta (se tienen que cumplir todas las condiciones)  --> Prioritario
+
+" OR " Nos ayuda para añadir mas condiciones a nuestra consulta (se tiene que cumplir al menos una de las condiciones)  --> No prioritario
+
+" NOT " Nos ayuda para negar una condicion (WHERE NOT coin = 'AGK')
+
+" TRUE " Se representa como 1 y significa que la condicion es (verdadera) --> Se utiliza con IS TRUE (WHERE coin IS TRUE)
+
+" FALSE " Se representa como 0 y significa que la condicion es (falsa) --> Se utiliza con IS FALSE (WHERE coin IS FALSE)
+
+-- Consultas--
+
+El simbolo  " * "  nos sirve para seleccionar todas las columnas de una tabla
+
+La palabra " DISTINCT " para no repetir datos en la consulta y solo recibir los unicos
+
+Eliminar tablas " DROP TABLE "    (DROP TABLE sales;)
