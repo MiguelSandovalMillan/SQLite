@@ -8,8 +8,10 @@ Las COLUMNAS se llaman CAMPOS
 -- Crear Tablas --
 
 CREATE TABLE ___(
-
 );
+
+
+-- Datos --
 
 TEXT --> STRING
 INTEGER --> ENTEROS
@@ -33,6 +35,8 @@ REAL --> DECIMALES
 " TRUE " Se representa como 1 y significa que la condicion es (verdadera) --> Se utiliza con IS TRUE (WHERE coin IS TRUE)
 
 " FALSE " Se representa como 0 y significa que la condicion es (falsa) --> Se utiliza con IS FALSE (WHERE coin IS FALSE)
+
+" IS NULL " Se utiliza para saber si un campo esta vacio (WHERE coin IS NULL)
 
 -- Consultas--
 
