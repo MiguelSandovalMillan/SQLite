@@ -19,4 +19,6 @@ WHERE coin = 'AGK';
 SELECT * FROM sales
 WHERE amount >= 20;
 
+
+-- BORRAR LA TABLA "sales" --
 DROP TABLE sales;

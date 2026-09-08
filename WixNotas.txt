@@ -40,8 +40,14 @@ REAL --> DECIMALES
 
 -- Consultas--
 
-El simbolo  " * "  nos sirve para seleccionar todas las columnas de una tabla
+El simbolo  " * "  nos sirve para seleccionar todas las columnas de una tabla   (SELECT * FROM sales;)
 
-La palabra " DISTINCT " para no repetir datos en la consulta y solo recibir los unicos
+La palabra " DISTINCT " para no repetir datos en la consulta y solo recibir los unicos  (SELECT DISTINCT coin FROM sales;)
+
+La palabra " ORDER BY " para ordenar los datos de la consulta (SELECT * FROM sales ORDER BY coin;)
+
+    -> Y se puede con " ASC " para ordenar de menor a mayor (SELECT * FROM sales ORDER BY coin ASC;)
+    -> Y se puede con " DESC " para ordenar de mayor a menor (SELECT * FROM sales ORDER BY coin DESC;)
+
 
 Eliminar tablas " DROP TABLE "    (DROP TABLE sales;)
