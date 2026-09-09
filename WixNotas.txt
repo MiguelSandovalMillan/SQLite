@@ -48,6 +48,8 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
 
 " IN " Se utiliza para saber si un campo esta dentro de un conjunto de datos (WHERE coin IN ('AGK', 'BTC', 'ETH'))
 
+" BETWEEN " Se utiliza para saber si un campo esta entre un rango (WHERE amount BETWEEN 10 AND 20) --> Incluye los numeros 
+
 
 
 --                                                       _CONSULTAS_                                                     --
