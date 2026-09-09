@@ -1,11 +1,11 @@
--- Notacion --
+--                                  _NOTACION_                                              --
 
 Las FILAS se llaman RESGISTROS
 Las COLUMNAS se llaman CAMPOS
 
 
 
--- Crear Tablas --
+--                                  _CREAR TABLAS_                                        --
 
 CREATE TABLE ___(
 );
@@ -18,14 +18,17 @@ INTEGER --> ENTEROS     INT --> ENTEROS
 REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total y 2 decimales
 
 
--- Atributos de Datos --
+
+--                                                  ATRIBUTOS DE DATOS                                                  --
 
 " NO NULL "  significa que los datos pueden repetirse
 
 " PRIMARY KEY "  significa que el dato es unico (No se puede repetir)
 
 
--- CONDICIONES --
+
+
+--                                                     _CONDICIONES_                                                     --
 
 " WHERE " se utiliza para Condiciones  (WHERE coin = 'AGK') o (WHERE amount <= 20)
 
@@ -41,8 +44,13 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
 
 " IS NULL " Se utiliza para saber si un campo esta vacio (WHERE coin IS NULL)
 
+" IS NOT NULL " Se utiliza para saber si un campo no esta vacio (WHERE coin IS NOT NULL)
 
--- Consultas--
+" IN " Se utiliza para saber si un campo esta dentro de un conjunto de datos (WHERE coin IN ('AGK', 'BTC', 'ETH'))
+
+
+
+--                                                       _CONSULTAS_                                                     --
 
 El simbolo  " * "  nos sirve para seleccionar todas las columnas de una tabla   (SELECT * FROM sales;)
 
@@ -52,6 +60,9 @@ La palabra " ORDER BY " para ordenar los datos de la consulta (SELECT * FROM sal
 
     -> Y se puede con " ASC " para ordenar de menor a mayor (SELECT * FROM sales ORDER BY coin ASC;)
     -> Y se puede con " DESC " para ordenar de mayor a menor (SELECT * FROM sales ORDER BY coin DESC;)
+
+La palabra " LIMIT " para limitar la cantidad de datos que queremos recibir (SELECT * FROM sales LIMIT 10;)
+
 
 
 Eliminar tablas " DROP TABLE "    (DROP TABLE sales;)
