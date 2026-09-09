@@ -13,14 +13,17 @@ CREATE TABLE ___(
 
 -- Datos --
 
-TEXT --> STRING
-INTEGER --> ENTEROS
-REAL --> DECIMALES
+TEXT --> STRING         VARCHAR --> STRING      (VARCHAR (100))  --> 100 caracteres maximos   
+INTEGER --> ENTEROS     INT --> ENTEROS
+REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total y 2 decimales
 
+
+-- Atributos de Datos --
 
 " NO NULL "  significa que los datos pueden repetirse
 
 " PRIMARY KEY "  significa que el dato es unico (No se puede repetir)
+
 
 -- CONDICIONES --
 
@@ -37,6 +40,7 @@ REAL --> DECIMALES
 " FALSE " Se representa como 0 y significa que la condicion es (falsa) --> Se utiliza con IS FALSE (WHERE coin IS FALSE)
 
 " IS NULL " Se utiliza para saber si un campo esta vacio (WHERE coin IS NULL)
+
 
 -- Consultas--
 
