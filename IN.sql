@@ -7,12 +7,17 @@ CREATE TABLE countries (
 INSERT INTO countries (location_x, location_y, country) VALUES
 (53.0, 27.53, 'Belarus'),
 (57.18, 24.96, 'Latvia'),
-(3.0, 134.25, 'Australia'),
-(4.0, 55.85, 'Oman'),
-(5.0, 45.45, 'Somalia'),
-(6.0, -85.32, 'Somalia'),
-(7.0, 90.5, 'Nicaragua'),
-(8.0, 139.61, 'Bhutan'),
-(9.0, -14.47, 'Japan'),
-(10.0, 10.0, 'Senegal'),
+(-25.64, 134.25, 'Australia'),
+(20.33, 55.85, 'Oman'),
+(3.59, 45.45, 'Somalia'),
+(12.85, -85.32, 'Nicaragua'),
+(27.26, 90.5, 'Bhutan'),
+(36.65, 139.61, 'Japan'),
+(14.52, -14.47, 'Senegal'),
 (39.39, -3.21, 'Spain');
+
+
+
+SELECT * FROM countries
+WHERE country IN ('Oman','Nicaragua','Bhutan','Senegal','Belarus')
+

@@ -50,7 +50,17 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
 
 " BETWEEN " Se utiliza para saber si un campo esta entre un rango (WHERE amount BETWEEN 10 AND 20) --> Incluye los numeros 
 
+" LIKE " Se utiliza para saber si un campo contiene un dato especifico (WHERE coin LIKE '%AGK%') 
+        --> El simbolo "%" significa cualquier cantidad de caracteres 
+        --> El simbolo "_" significa exactamenteun solo caracter   
+            
+            %a -> significa cualquier cadena que termine con "a".
+            a% -> significa cualquier cadena que empiece con "a".
+            %a% -> significa cualquier cadena que contenga "a".
+            _a% -> significa que la letra "a" es el segundo carácter de la cadena.
+            %a__ -> significa que la cadena contiene "a" en el tercer lugar desde el final.
 
+" AS " Se utiliza para renombrar un campo (SELECT coin AS moneda FROM sales;)
 
 --                                                       _CONSULTAS_                                                     --
 
