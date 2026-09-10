@@ -78,3 +78,23 @@ La palabra " LIMIT " para limitar la cantidad de datos que queremos recibir (SEL
 
 
 Eliminar tablas " DROP TABLE "    (DROP TABLE sales;)
+
+
+--                                                       _OPERADORES_ 
+
+" + "  Suma de numeros (SELECT amount + 10 FROM sales;)
+
+" - "  Resta de numeros (SELECT amount - 10 FROM sales;)
+
+" * "  Multiplicacion de numeros (SELECT amount * 10 FROM sales;)
+
+" / "  Division de numeros (SELECT amount / 10 FROM sales;)
+
+            EJEMPLO
+SELECT price + 10 as increased_price,
+    price - 10 as reduced_price,
+    price * 10 as multiple_price,
+    price / 2 as half_price
+FROM products;
+
+
