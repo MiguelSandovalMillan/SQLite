@@ -25,7 +25,7 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
 
 " PRIMARY KEY "  significa que el dato es unico (No se puede repetir)
 
-
+" AUTOINCREMENT "  significa que el dato se va a ir sumando automaticamente (id = 1, id = 2, id = 3, etc)
 
 
 --                                                     _CONDICIONES_                                                     --
