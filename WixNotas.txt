@@ -1,17 +1,17 @@
---                                  _NOTACION_                                              --
+--       _'CONCEPTOS'_             --
 
 Las FILAS se llaman RESGISTROS
 Las COLUMNAS se llaman CAMPOS
 
 
 
---                 _CREAR TABLAS_                                        --
+--  _'CREAR TABLAS'_    --
 
 CREATE TABLE ___(
 );
 
 
--- Datos --
+--                                   _'DATOS'_                                               --
 
 TEXT --> STRING         VARCHAR --> STRING      (VARCHAR (100))  --> 100 caracteres maximos   
 INTEGER --> ENTEROS     INT --> ENTEROS
@@ -19,7 +19,7 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
 
 
 
---                                       _ATRIBUTOS DE DATOS_                                                  --
+--                               _'ATRIBUTOS DE DATOS'_                                         --
 
 " NO NULL "  significa que los datos pueden repetirse
 
@@ -28,7 +28,9 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
 " AUTOINCREMENT "  significa que el dato se va a ir sumando automaticamente (id = 1, id = 2, id = 3, etc)
 
 
---                                           _CONDICIONES_                                                     --
+
+
+--                                           _'CONDICIONES'_                                                     --
 
 " WHERE " se utiliza para Condiciones  (WHERE coin = 'AGK') o (WHERE amount <= 20)
 
@@ -63,7 +65,9 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
 
 " AS " Se utiliza para renombrar un campo (SELECT coin AS moneda FROM sales;)
 
---                                             _CONSULTAS_                                                     --
+
+
+--                                   _'CONSULTAS'_                                           --
 
 El simbolo  " * "  nos sirve para seleccionar todas las columnas de una tabla   (SELECT * FROM sales;)
 
@@ -81,7 +85,9 @@ La palabra " LIMIT " para limitar la cantidad de datos que queremos recibir (SEL
 Eliminar tablas " DROP TABLE "    (DROP TABLE sales;)
 
 
---                       _OPERADORES_                           --
+
+
+--                       _'OPERADORES'_                           --
 
 " + "  Suma de numeros (SELECT amount + 10 FROM sales;)
 
@@ -103,7 +109,9 @@ SELECT price + 10 as increased_price,
 FROM products;
 
 
---          _FUNCIONES_          --
+
+
+--                          _'FUNCIONES'_                      --
 
 " ROUND() "  Redondea un numero (SELECT ROUND(amount, 2) FROM sales;)
         --> ROUND(number, decimal_places) 
