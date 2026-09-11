@@ -5,7 +5,7 @@ Las COLUMNAS se llaman CAMPOS
 
 
 
---                                  _CREAR TABLAS_                                        --
+--                 _CREAR TABLAS_                                        --
 
 CREATE TABLE ___(
 );
@@ -60,6 +60,7 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
             _a% -> significa que la letra "a" es el segundo carácter de la cadena.
             %a__ -> significa que la cadena contiene "a" en el tercer lugar desde el final.
 
+
 " AS " Se utiliza para renombrar un campo (SELECT coin AS moneda FROM sales;)
 
 --                                                       _CONSULTAS_                                                     --
@@ -80,7 +81,7 @@ La palabra " LIMIT " para limitar la cantidad de datos que queremos recibir (SEL
 Eliminar tablas " DROP TABLE "    (DROP TABLE sales;)
 
 
---                                                       _OPERADORES_ 
+--                       _OPERADORES_                           --
 
 " + "  Suma de numeros (SELECT amount + 10 FROM sales;)
 
@@ -90,6 +91,10 @@ Eliminar tablas " DROP TABLE "    (DROP TABLE sales;)
 
 " / "  Division de numeros (SELECT amount / 10 FROM sales;)
 
+" % "  Modulo de numeros (SELECT amount % 10 FROM sales;)
+
+
+
             EJEMPLO
 SELECT price + 10 as increased_price,
     price - 10 as reduced_price,
@@ -98,3 +103,6 @@ SELECT price + 10 as increased_price,
 FROM products;
 
 
+--          _FUNCIONES_          --
+
+" ROUND() "  Redondea un numero (SELECT ROUND(amount, 2) FROM sales;)
