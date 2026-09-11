@@ -126,4 +126,3 @@ FROM products;
                                                             -- Returns 3.15 (rounds up because the next digit is 5)
 
 
-REQUIRED OUTPUT FORMAT 
