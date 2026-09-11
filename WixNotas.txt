@@ -19,7 +19,7 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
 
 
 
---                                                  ATRIBUTOS DE DATOS                                                  --
+--                                       _ATRIBUTOS DE DATOS_                                                  --
 
 " NO NULL "  significa que los datos pueden repetirse
 
@@ -28,7 +28,7 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
 " AUTOINCREMENT "  significa que el dato se va a ir sumando automaticamente (id = 1, id = 2, id = 3, etc)
 
 
---                                                     _CONDICIONES_                                                     --
+--                                           _CONDICIONES_                                                     --
 
 " WHERE " se utiliza para Condiciones  (WHERE coin = 'AGK') o (WHERE amount <= 20)
 
@@ -63,7 +63,7 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
 
 " AS " Se utiliza para renombrar un campo (SELECT coin AS moneda FROM sales;)
 
---                                                       _CONSULTAS_                                                     --
+--                                             _CONSULTAS_                                                     --
 
 El simbolo  " * "  nos sirve para seleccionar todas las columnas de una tabla   (SELECT * FROM sales;)
 
