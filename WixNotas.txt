@@ -106,3 +106,24 @@ FROM products;
 --          _FUNCIONES_          --
 
 " ROUND() "  Redondea un numero (SELECT ROUND(amount, 2) FROM sales;)
+        --> ROUND(number, decimal_places) 
+            number: El numero que quieres redondear
+            decimal_places: El numero de posiciones decimales a los que se redondeara el numero
+                - si es positivo redondea a ese número de posiciones decimales 
+                - si es negativo redondea a la izquierda del punto decimal
+
+
+                SELECT ROUND(3.7);                          SELECT ROUND(3.14159, 2);
+                -- Returns 4.0                              -- Returns 3.14
+
+                SELECT ROUND(3.3);                          SELECT ROUND(3.14159, 1);
+                -- Returns 3.0                              -- Returns 3.1      
+
+                SELECT ROUND(3.5);                          SELECT ROUND(3.14159, 0);
+                -- Returns 4.0 (rounds up from .5)          -- Returns 3.0
+
+                                                            SELECT ROUND(3.145, 2);
+                                                            -- Returns 3.15 (rounds up because the next digit is 5)
+
+
+REQUIRED OUTPUT FORMAT 
