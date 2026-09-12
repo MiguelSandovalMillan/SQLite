@@ -30,7 +30,7 @@ REAL --> DECIMALES      DECIMAL --> DECIMALES   (10,2)  --> 10 digitos en total 
 " AUTOINCREMENT "  significa que el dato se va a ir sumando automaticamente (id = 1, id = 2, id = 3, etc)
 
 
-
+" NOT NULL " SI
 
 
 --                                           _'CONDICIONES'_                                                     --
@@ -124,19 +124,41 @@ FROM products;
                 - si es negativo redondea a la izquierda del punto decimal
 
 
-                SELECT ROUND(3.7);                          SELECT ROUND(3.14159, 2);
-                -- Returns 4.0                              -- Returns 3.14
+--                SELECT ROUND(3.7);                          SELECT ROUND(3.14159, 2);
+--                -- Returns 4.0                              -- Returns 3.14
 
-                SELECT ROUND(3.3);                          SELECT ROUND(3.14159, 1);
-                -- Returns 3.0                              -- Returns 3.1      
+--               SELECT ROUND(3.3);                          SELECT ROUND(3.14159, 1);
+--               -- Returns 3.0                              -- Returns 3.1      
 
-                SELECT ROUND(3.5);                          SELECT ROUND(3.14159, 0);
-                -- Returns 4.0 (rounds up from .5)          -- Returns 3.0
+--               SELECT ROUND(3.5);                          SELECT ROUND(3.14159, 0);
+--               -- Returns 4.0 (rounds up from .5)          -- Returns 3.0
 
-                                                            SELECT ROUND(3.145, 2);
-                                                            -- Returns 3.15 (rounds up because the next digit is 5)
+--                                                            SELECT ROUND(3.145, 2);
+--                                                            -- Returns 3.15 (rounds up because the next digit is 5)
 
 
 --          _'FECHAS'_          --
+
+" YYYY-MM-DD " --> Se puede utilizar para guardar fechas en SQLite (2024-06-01)  -->  (WHERE col1 > '2011-01-13')
+
+" JULIANDAY () "  --> Se utiliza para convertir una fecha en un numero decimal (SELECT JULIANDAY('2011-01-13  12:00:00');)  -->  (2455580.5)
+                2455580.5 --> significa que es medio dia (12:00:00)     2455580.0 --> significa que es medianoche (00:00:00)
+
+
+" DATE () "  --> Se utiliza para convertir un numero decimal en una fecha (SELECT DATE(2455580.5);)  -->  (2011-01-13)
+
+" STRFTIME () "  --> Se utiliza para convertir una fecha en un formato especifico (SELECT STRFTIME('%Y-%m-%d', '2011-01-13 12:00:00');)  -->  (2011-01-13)
+
+--                                                                                                              Mostrar combinación de año y día (se puede usar cualquier separador)
+--       SELECT DATE('2023-05-15 13:45:00')        SELECT STRFTIME('%Y', '2023-05-15') -- Obtener año          SELECT STRFTIME('%Y:%d', '2023-05-15')
+--       -- Devuelve: 2023-05-15                   -- Devuelve: 2023                                           -- Devuelve: 2023:15
+--
+--       SELECT DATE('now')                        SELECT STRFTIME('%m', '2023-05-15') -- Obtener mes          SELECT STRFTIME('%d-%m-%Y', '2023-05-15') -- Usar un separador de guion en su lugar
+--       -- Devuelve la fecha actual               -- Devuelve: 05                                             -- Devuelve: 15-05-2023
+
+--                                                 SELECT STRFTIME('%d', '2023-05-15') -- Obtener día          SELECT STRFTIME('%w', '2023-05-15') -- Obtener día de la semana
+--                                                 -- Devuelve: 15                                             -- Devuelve: 1 (lunes; domingo es 0)
+
+
 
 

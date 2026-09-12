@@ -55,6 +55,7 @@ SELECT * FROM people
 WHERE age < 19 OR age > 31 or status = "employed"
 
 
+
 SELECT * FROM people
 WHERE NOT age < 19 
 WHERE age >= 19         --(ES LO MISMO QUE LA LINEA ANTERIOR)--
