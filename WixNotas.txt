@@ -192,6 +192,47 @@ WHERE STRFTIME('%Y', date_column) = STRFTIME('%Y', 'now')
 
 
 
---                          _'AGREGACION ANIDADA'_                                    --
+--                                                           _'AGREGACION ANIDADA'_                                                   --
 
 Se ejecuta primero y devuelve un único valor, que después se puede utilizar en la consulta principal para cada fila  -->  SELECT salary + (SELECT MIN(salary) FROM table)
+
+
+
+--                                  _'AGRUPACION'_                                    --
+
+" GROUP BY " Se utiliza para agrupar los resultados de una consulta en base a una o varias columnas (SELECT coin, AVG(amount) FROM sales 'GROUP BY' coin;)
+
+" HAVING " Se utiliza para filtrar los resultados de una consulta después de que se han agrupado (SELECT coin, AVG(amount) FROM sales 'GROUP BY' coin 'HAVING' AVG(amount) > 100;)
+            
+            (se puede combinar con WHERE para filtrar antes de agrupar y HAVING para filtrar después de agrupar) 
+                --> 'SELECT' category, AVG(price) FROM products 'WHERE' price > 10 'GROUP BY' category 'HAVING' AVG(price) > 20;
+
+
+
+--                                  _'SUBCONSULTAS'_                                    --
+
+Una subconsulta nos ayuda a encontrar empleados que ganan más que el salario promedio de la empresa, 
+calculando primero el promedio (consulta interna) y después usando ese valor para filtrar empleados (consulta externa)
+
+-                                    'SELECT' id, salary
+-                                    'FROM' employees
+-                                    'WHERE' salary > (
+-                                        'SELECT' AVG(salary)
+-                                        'FROM' employees
+-                                    );
+
+
+-            Hay varios tipos de consultas:
+1. Subconsultas escalares --> Devuelven un solo valor (fila,columna).
+2. Subconsultas de filas --> Devuelven una unica fila con varias columnas.
+3. Subconsultas de tabla --> Devuelven varias filas y columnas de una tabla completa.
+
+
+
+SELECT name, salary             SELECT name                             SELECT department, count
+FROM employees                  FROM employees                          FROM (
+WHERE salary > (                WHERE (department, salary) = (              SELECT department, COUNT(*) as count
+    SELECT AVG(salary)              SELECT department, salary               FROM employees
+    FROM employees                  FROM employees                          GROUP BY department
+);                                  WHERE name = 'Alice'                ) as dept_counts;
+-                               );            
