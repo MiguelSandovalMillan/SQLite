@@ -160,5 +160,38 @@ FROM products;
 --                                                 -- Devuelve: 15                                             -- Devuelve: 1 (lunes; domingo es 0)
 
 
+%Y: Año (4 dígitos)
+%m: Mes (01-12)
+%d: Día del mes (01-31)
+%w: Día de la semana (0-6, el domingo es 0)
+
+%H: Hora (00-23)
+%M: Minuto (00-59)
+%S: Segundo (00-59)
 
 
+SELECT * FROM table
+WHERE STRFTIME('%Y', date_column) = STRFTIME('%Y', 'now')
+
+
+
+
+--                          _'AGREGACION INTEGRADA'_                                    --
+
+" MAX() " Devuelve el valor {máximo} de una columna (SELECT MAX(amount) FROM sales;)
+
+" MIN() " Devuelve el valor {mínimo} de una columna (SELECT MIN(amount) FROM sales;)
+
+" AVG() " Devuelve el valor {promedio} de una columna (SELECT AVG(amount) FROM sales;)
+
+" COUNT() " Devuelve el {número de filas} que cumplen con una condición y sean no nulas (SELECT COUNT(*) FROM sales WHERE coin = 'AGK';)
+
+" SUM() " Devuelve la {suma} de los valores no nulos de una columna (SELECT SUM(amount) FROM sales;)
+
+" VALUE " Devuelve el valor de una columna específica (SELECT VALUE(column_name) FROM sales;)
+
+
+
+--                          _'AGREGACION ANIDADA'_                                    --
+
+Se ejecuta primero y devuelve un único valor, que después se puede utilizar en la consulta principal para cada fila  -->  SELECT salary + (SELECT MIN(salary) FROM table)
