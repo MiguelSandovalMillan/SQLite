@@ -236,3 +236,6 @@ WHERE salary > (                WHERE (department, salary) = (              SELE
     FROM employees                  FROM employees                          GROUP BY department
 );                                  WHERE name = 'Alice'                ) as dept_counts;
 -                               );            
+
+" INNER JOIN " Devuelve solo las filas que tienen coincidencias en ambas tablas 
+                (SELECT * FROM table1 INNER JOIN table2 ON table1.id = table2.id;)
