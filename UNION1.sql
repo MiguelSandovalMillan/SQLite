@@ -35,8 +35,6 @@ WHERE courses.lecturer_id = professors.lecturer_id
 
 
 
-
-
 -- OPCION 2 --
 
 SELECT courses.course_id, professors.name AS lecturer_name
