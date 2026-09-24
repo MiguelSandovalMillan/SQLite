@@ -242,10 +242,6 @@ WHERE salary > (                WHERE (department, salary) = (              SELE
 ---                               _'UNION'_                                    --
 
 
-" JOIN " Nos ayuda a combinar los resultados de dos o más consultas en una sola tabla de resultados 
--                (SELECT * FROM table1 JOIN SELECT * FROM table2;)
-
-
 " INNER JOIN " Devuelve solo las filas que tienen coincidencias en ambas tablas 
 -                (SELECT * FROM table1 INNER JOIN table2 ON table1.id = table2.id;)
 
@@ -254,3 +250,5 @@ WHERE salary > (                WHERE (department, salary) = (              SELE
 SELECT table1.col1, table2.col2, ...
 FROM table1, (SELECT * FROM table) AS table2
 WHERE table1.id = table2.id
+
+
