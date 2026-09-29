@@ -137,7 +137,10 @@ FROM products;
 --                                                            -- Returns 3.15 (rounds up because the next digit is 5)
 
 
---          _'FECHAS'_          --
+
+
+--                                                       _'FECHAS'_                                                      --
+
 
 " YYYY-MM-DD " --> Se puede utilizar para guardar fechas en SQLite (2024-06-01)  -->  (WHERE col1 > '2011-01-13')
 
@@ -176,7 +179,10 @@ WHERE STRFTIME('%Y', date_column) = STRFTIME('%Y', 'now')
 
 
 
---                          _'AGREGACION INTEGRADA'_                                    --
+
+
+--                                                      _'AGREGACION INTEGRADA'_                                    --
+
 
 " MAX() " Devuelve el valor {máximo} de una columna (SELECT MAX(amount) FROM sales;)
 
@@ -192,24 +198,30 @@ WHERE STRFTIME('%Y', date_column) = STRFTIME('%Y', 'now')
 
 
 
+
 --                                                           _'AGREGACION ANIDADA'_                                                   --
+
 
 Se ejecuta primero y devuelve un único valor, que después se puede utilizar en la consulta principal para cada fila  -->  SELECT salary + (SELECT MIN(salary) FROM table)
 
 
 
---                                  _'AGRUPACION'_                                    --
+
+
+--                                                      _'AGRUPACION'_                                                             --
+
 
 " GROUP BY " Se utiliza para agrupar los resultados de una consulta en base a una o varias columnas (SELECT coin, AVG(amount) FROM sales 'GROUP BY' coin;)
 
 " HAVING " Se utiliza para filtrar los resultados de una consulta después de que se han agrupado (SELECT coin, AVG(amount) FROM sales 'GROUP BY' coin 'HAVING' AVG(amount) > 100;)
-            
-            (se puede combinar con WHERE para filtrar antes de agrupar y HAVING para filtrar después de agrupar) 
-                --> 'SELECT' category, AVG(price) FROM products 'WHERE' price > 10 'GROUP BY' category 'HAVING' AVG(price) > 20;
+
+_           (se puede combinar con WHERE para filtrar antes de agrupar y HAVING para filtrar después de agrupar) 
+_               --> 'SELECT' category, AVG(price) FROM products 'WHERE' price > 10 'GROUP BY' category 'HAVING' AVG(price) > 20;
 
 
 
 --                                  _'SUBCONSULTAS'_                                    --
+
 
 Una subconsulta nos ayuda a encontrar empleados que ganan más que el salario promedio de la empresa, 
 calculando primero el promedio (consulta interna) y después usando ese valor para filtrar empleados (consulta externa)
@@ -239,13 +251,15 @@ WHERE salary > (                WHERE (department, salary) = (              SELE
 
 
 
+
 ---                               _'UNION'_                                    --
+
 
 " INNER JOIN " Devuelve solo las filas que tienen coincidencias en ambas tablas 
 -                (SELECT * FROM table1 INNER JOIN table2 ON table1.id = table2.id;)
 
 
--        _Ejemplo_          -
+-          _Ejemplo_          -
 
 SELECT table1.col1, table2.col2, ...
 FROM table1, (SELECT * FROM table) AS table2
@@ -253,8 +267,8 @@ WHERE table1.id = table2.id
 
 
 
-" UNION " Combina los resultados de dos o más consultas SELECT en un solo conjunto de resultados, eliminando duplicados por defecto.
--                (SELECT col1, col2 FROM table1) UNION (SELECT col1, col2 FROM table2);
+" UNION " Combina los resultados de dos o más consultas SELECT en un solo conjunto de resultados, eliminando duplicados por defecto.                
+_           (SELECT col1, col2 FROM table1) UNION (SELECT col1, col2 FROM table2);
 
 
 
