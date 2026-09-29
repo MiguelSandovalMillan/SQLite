@@ -241,14 +241,28 @@ WHERE salary > (                WHERE (department, salary) = (              SELE
 
 ---                               _'UNION'_                                    --
 
-
 " INNER JOIN " Devuelve solo las filas que tienen coincidencias en ambas tablas 
 -                (SELECT * FROM table1 INNER JOIN table2 ON table1.id = table2.id;)
 
 
--        _Ejemplo_ 
+-        _Ejemplo_          -
+
 SELECT table1.col1, table2.col2, ...
 FROM table1, (SELECT * FROM table) AS table2
 WHERE table1.id = table2.id
 
 
+
+" UNION " Combina los resultados de dos o más consultas SELECT en un solo conjunto de resultados, eliminando duplicados por defecto.
+-                (SELECT col1, col2 FROM table1) UNION (SELECT col1, col2 FROM table2);
+
+
+
+---                               _'AUTO UNION'_                                    --
+
+
+                -        _Ejemplo_          -
+
+SELECT e2.employee_id, e2.employee_name, e1.employee_name as manager_name
+FROM employees as e1
+JOIN employees as e2 ON e1.employee_id = e2.manager_id
