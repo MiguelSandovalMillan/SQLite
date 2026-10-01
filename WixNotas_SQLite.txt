@@ -226,12 +226,12 @@ _               --> 'SELECT' category, AVG(price) FROM products 'WHERE' price > 
 Una subconsulta nos ayuda a encontrar empleados que ganan más que el salario promedio de la empresa, 
 calculando primero el promedio (consulta interna) y después usando ese valor para filtrar empleados (consulta externa)
 
--                                    'SELECT' id, salary
--                                    'FROM' employees
--                                    'WHERE' salary > (
--                                        'SELECT' AVG(salary)
--                                        'FROM' employees
--                                    );
+_                                    'SELECT' id, salary
+_                                    'FROM' employees
+_                                    'WHERE' salary > (
+_                                        'SELECT' AVG(salary)
+_                                        'FROM' employees
+_                                    );
 
 
 -            Hay varios tipos de consultas:
